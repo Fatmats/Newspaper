@@ -1,0 +1,329 @@
+:root {
+    --font: "EB Garamond", serif;
+    --font-title: "Playfair Display", serif;
+    --font-sans-serif: "Manrope", sans-serif;
+    --black: #1c1f33;
+    --black--acc: #222;
+    --gray: #eee;
+    --gray-1: #ededed;
+}
+body {
+    font-size: 1.1rem;
+    background: var(--preview-bg);
+    font-family: var(--font);
+    color: var(--black);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png) repeat;
+    padding: 4rem 2rem;
+    line-height: 1.3;
+    text-align: justify;
+}
+h1 {
+    font-family: var(--font-title) !important;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+}
+#nav {
+    list-style: none;
+    border-bottom: 6px double black;
+    border-top: 6px double black;
+    font-size: x-large;
+}
+#title h2 {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 42px !important;
+    font-weight: bolder;
+}
+#praf {
+    height: 30%;
+    @media (max-width: 768px) {
+        height: 31%;
+    }
+    div {
+        column-count: 2;
+        font-size: large;
+        margin-bottom: 0.8rem;
+    }
+}
+figure {
+    img {
+        height: 70%;
+        object-fit: cover;
+        object-position: right;
+        &:hover {
+            filter: none;
+        }
+    }
+    p {
+        font-style: italic;
+    }
+}
+img {
+    width: 100%;
+    filter: grayscale(95%);
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--black);
+    transition: 0.3s ease;
+}
+#second {
+    #plan {
+        border-bottom: 1px solid var(--black--acc);
+        margin-right: 10px;
+        img {
+            filter: grayscale(95%);
+            transition: 0.3s ease;
+        }
+        p {
+            column-count: 2;
+        }
+        &:hover {
+            img {
+                filter: none;
+            }
+            h4 {
+                background-color: var(--black--acc);
+                color: var(--gray);
+            }
+        }
+    }
+    #hogvard {
+        padding: 0px;
+        background-color: transparent;
+        border: 2px solid transparent !important;
+        outline: 4px solid var(--black--acc) !important;
+        box-shadow: inset 0 0 0 1px var(--black);
+        width: 20%;
+        @media (max-width: 768px) {
+            width: 93%;
+            margin: 3%;
+        }
+
+        p {
+            background-color: var(--black);
+            color: var(--gray);
+            font-size: 24px;
+            font-family: var(--font-sans-serif);
+            font-weight: 750;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        &:hover {
+            p {
+                background-color: transparent;
+                color: var(--black);
+            }
+        }
+        .hogvard-image {
+            height: 100%;
+            position: relative;
+            background-color: transparent;
+            overflow: hidden;
+            img {
+                transform: rotate(60deg);
+                height: 100%;
+                position: absolute;
+                border: 0;
+                width: 250%;
+                left: -70%;
+                bottom: -35%;
+            }
+            span {
+                font-style: italic;
+                max-width: 110px;
+                position: absolute;
+                top: 7%;
+                left: 18%;
+                font-size: 22px;
+                line-height: 0.9;
+                transform: rotate(-5deg);
+            }
+        }
+    }
+    #artc {
+        border-top: 1px solid var(--black--acc);
+        border-bottom: 1px solid var(--black--acc);
+        padding: 0px !important;
+        margin-left: 1%;
+        #pasta {
+            margin-left: 15px;
+            padding: 5px;
+
+            h4 {
+                font-size: 28px;
+                font-family: var(--font-title);
+                font-weight: bold;
+            }
+            p {
+                line-height: 1.3;
+            }
+            &:hover {
+                h4 {
+                    background-color: var(--black--acc);
+                    color: var(--gray);
+                }
+            }
+        }
+        #magazine {
+            @extend #pasta;
+            border-top: 2px solid var(--black--acc);
+        }
+    }
+}
+#thirt {
+    #firsts {
+        &:hover {
+            h4 {
+                background-color: var(--black--acc);
+                color: var(--gray-1);
+            }
+        }
+        h4 {
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            transition: 0.2s ease;
+            font-weight: bold;
+            &:hover {
+                background-color: var(--black--acc);
+                color: var(--gray-1);
+            }
+        }
+        p {
+            font-size: 17.5px;
+            text-align: left;
+            line-height: 1.3;
+        }
+    }
+    #seconds {
+        img {
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+    #thirt {
+        @extend #seconds;
+        @extend #firsts;
+    }
+}
+#fourd {
+
+    &:hover {
+        img{
+               filter: none;
+        }
+     
+    }
+    .img {
+        padding-right: 0px;
+        
+    }
+    .gb {
+        padding-left: 0px;
+        h4 {
+            text-align: center;
+            background-color: #999;
+            color: white;
+            margin: 0px;
+            font-size: 30px;
+        }
+        p {
+            text-align: center;
+            background-color: #666;
+            color: white;
+            font-size: 28px;
+        }
+    }
+}
+
+.sidebar {
+    border-left: 1px solid black;
+    height: auto;
+    h3 {
+        font-style: italic;
+        font-weight: bolder;
+    }
+    &:nth-child(2) {
+        img {
+            filter: grayscale(95%);
+            transition: 0.3s ease;
+            margin-bottom: 0px;
+            &:hover {
+                filter: none;
+            }
+        }
+        .card-title {
+            background-color: #999;
+            font: 20px var(--font-sans-serif);
+            font-weight: bolder;
+            padding: 5px;
+            margin-bottom: 0 !important;
+            color: var(--gray);
+        }
+        .card-item {
+            background-color: #666;
+            color: var(--gray);
+            padding: 1rem 1rem 1.2rem;
+            h4 {
+                font-weight: bold;
+            }
+            p {
+                font-family: var(--font-title);
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+        #designer {
+            padding: 10px;
+            border-bottom: 2px solid var(--black--acc);
+            h5 {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            p {
+                line-height: 1.3;
+            }
+            &:hover {
+                h5 {
+                    background-color: var(--black--acc);
+                    color: var(--gray);
+                }
+            }
+        }
+    }
+    #sidebar3 {
+        @extend #designer;
+    }
+    .img {
+        overflow: hidden;
+        height: auto;
+        background-color: transparent;
+        padding: 2px;
+        border: 2px solid transparent;
+        outline: 3px solid black;
+        width: calc(100% - 4px);
+        &:hover {
+            p {
+                background-color: var(--gray-1);
+                color: var(--black--acc);
+            }
+        }
+
+        img {
+            width: 300%;
+            height: 76%;
+        }
+        h4 {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+        p {
+            @extend h4;
+            background-color: var(--black--acc);
+            color: var(--gray-1);
+        }
+    }
+}
